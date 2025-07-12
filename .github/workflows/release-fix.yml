@@ -10,7 +10,7 @@ on:
 
 env:
     IMAGE_NAME: cr.yandex/crpkjea9uj0o2senori0/app
-    VERSION: ${{ github.event.inputs.RELEASE_VERSION }}
+    VERSION: ${{ github.event.inputs.release_version }}
     FIX: ${{ github.run_number }}
 
 jobs:
@@ -39,7 +39,7 @@ jobs:
             - name: Checkout release branch
               uses: actions/checkout@v4
               with:
-                  ref: releases/${{ github.event.inputs.RELEASE_VERSION }}
+                  ref: releases/${{ github.event.inputs.release_version }}
                   fetch-depth: 0
 
             - name: Login to Yandex Container Registry
