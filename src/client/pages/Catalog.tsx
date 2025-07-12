@@ -33,7 +33,7 @@ export const Catalog: React.FC = () => {
 			<Helmet title="Catalog" />
 			<div className="row">
 				<div className="col">
-					<h1>Catalog Anatoly Company</h1>
+					<h1>Catalog</h1>
 				</div>
 			</div>
 			<div className="row">{items}</div>
