@@ -23,7 +23,7 @@ jobs:
               with:
                   host: ${{ secrets.PROD_HOST }}
                   username: ${{ secrets.PROD_USER }}
-                  ssh_key: ${{ secrets.PROD_SSH_KEY }}
+                  key: ${{ secrets.PROD_SSH_KEY }}
                   script: |
                       docker login -u oauth -p ${{ secrets.YC_OAUTH_TOKEN }} cr.yandex
                       docker pull ${{ env.IMAGE_NAME }}:${{ env.VERSION }}_latest
